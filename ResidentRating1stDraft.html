@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Global Rating Scale Of Operative Procedure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	  <div class="container">
+
+
+	<!-- Form Name -->
+	<legend>Global Rating Scale Of Operative Procedure</legend>
+
+	<!-- Text input-->
+	<div class="control-group">
+	  <label class="control-label" for="resName">Resident Name</label>
+	  <div class="controls">
+	    <input id="resName" name="resName" type="text" placeholder="e.g. John Doe" class="input-xlarge">
+    
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="control-group">
+	  <label class="control-label" for="facName">Faculty Name</label>
+	  <div class="controls">
+	    <input id="facName" name="facName" type="text" placeholder="e.g. Dr. Jane Doe" class="input-xlarge">
+    
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="control-group">
+	  <label class="control-label" for="date">Date of Procedure</label>
+	  <div class="controls">
+	    <input id="date" name="date" type="text" placeholder="mm/dd/yyyy" class="input-xlarge">
+    
+	  </div>
+	</div>
+
+<!-- THERE IS A PROBLEM WITH THE THIS: THE procedures don't show up from the dropdown -->
+	<!-- Button Drop Down -->
+	<div class="control-group">
+	  <label class="control-label" for="procedure">Procedure</label>
+	  <div class="controls">
+	    <div class="input-append">
+	      <input id="procedure" name="procedure" class="input-xlarge" placeholder="Select a procedure, or type here for other" type="text">
+	      <div class="btn-group">
+	        <button class="btn-dropdown-toggle" data-toggle="dropdown">
+	          Procedures
+	          <span class="caret"></span>
+	        </button>
+	        <ul class="dropdown-menu">
+	          <li><a href="#">Parotidectomy</a></li>
+	          <li><a href="#">Neck Dissection</a></li>
+	          <li><a href="#">Oral Cavity Resection</a></li>
+	          <li><a href="#">Thyroid/Parathyroidectomy</a></li>
+	          <li><a href="#">Tympanoplasty</a></li>
+	          <li><a href="#">Mastoidectomy</a></li>
+	          <li><a href="#">Stapedectomy/Ossiculoplasty</a></li>
+	          <li><a href="#">Rhinoplasty</a></li>
+	          <li><a href="#">Mandible/Midface Fractures</a></li>
+	          <li><a href="#">Flaps and Grafts</a></li>
+	          <li><a href="#">Airway - Pediatric and Adult</a></li>
+	          <li><a href="#">Congenital Neck Masses</a></li>
+	          <li><a href="#">Ethmoidectomy</a></li>
+	          <li><a href="#">Bronchoscopy</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<p>Please check the number corresponding to the candidate's performance in each category, irrespective of training level.</p>
+	<!-- Multiple Radios (inline) -->
+	<div class="control-group">
+	  <label class="control-label" for="respectForTissue">Respect For Tissue</label>
+	  <div class="controls">
+	    <label class="radio-inline" for="respectForTissue-0">
+	      <input type="radio" name="respectForTissue" id="respectForTissue-0" value="1" checked="checked">
+	      1
+	    </label>
+	    <label class="radio-inline" for="respectForTissue-1">
+	      <input type="radio" name="respectForTissue" id="respectForTissue-1" value="2">
+	      2
+	    </label>
+	    <label class="radio-inline" for="respectForTissue-2">
+	      <input type="radio" name="respectForTissue" id="respectForTissue-2" value="3">
+	      3
+	    </label>
+	    <label class="radio-inline" for="respectForTissue-3">
+	      <input type="radio" name="respectForTissue" id="respectForTissue-3" value="4">
+	      4
+	    </label>
+	    <label class="radio-inline" for="respectForTissue-4">
+	      <input type="radio" name="respectForTissue" id="respectForTissue-4" value="5">
+	      5
+	    </label>
+	  </div>
+	</div>
+
+	<!-- Multiple Radios (inline) -->
+	<div class="control-group">
+	  <label class="control-label" for="timeAndMotion">Time and Motion</label>
+	  <div class="controls">
+	    <label class="radio-inline" for="timeAndMotion-0">
+	      <input type="radio" name="timeAndMotion" id="timeAndMotion-0" value="1" checked="checked">
+	      1
+	    </label>
+	    <label class="radio-inline" for="timeAndMotion-1">
+	      <input type="radio" name="timeAndMotion" id="timeAndMotion-1" value="2">
+	      2
+	    </label>
+	    <label class="radio-inline" for="timeAndMotion-2">
+	      <input type="radio" name="timeAndMotion" id="timeAndMotion-2" value="3">
+	      3
+	    </label>
+	    <label class="radio-inline" for="timeAndMotion-3">
+	      <input type="radio" name="timeAndMotion" id="timeAndMotion-3" value="4">
+	      4
+	    </label>
+	    <label class="radio-inline" for="timeAndMotion-4">
+	      <input type="radio" name="timeAndMotion" id="timeAndMotion-4" value="5">
+	      5
+	    </label>
+	  </div>
+	</div>
+
+	<!-- Multiple Radios (inline) -->
+	<div class="control-group">
+	  <label class="control-label" for="instrumentHandling">Instrument Handling</label>
+	  <div class="controls">
+	    <label class="radio-inline" for="instrumentHandling-0">
+	      <input type="radio" name="instrumentHandling" id="instrumentHandling-0" value="1" checked="checked">
+	      1
+	    </label>
+	    <label class="radio-inline" for="instrumentHandling-1">
+	      <input type="radio" name="instrumentHandling" id="instrumentHandling-1" value="2">
+	      2
+	    </label>
+	    <label class="radio-inline" for="instrumentHandling-2">
+	      <input type="radio" name="instrumentHandling" id="instrumentHandling-2" value="3">
+	      3
+	    </label>
+	    <label class="radio-inline" for="instrumentHandling-3">
+	      <input type="radio" name="instrumentHandling" id="instrumentHandling-3" value="4">
+	      4
+	    </label>
+	    <label class="radio-inline" for="instrumentHandling-4">
+	      <input type="radio" name="instrumentHandling" id="instrumentHandling-4" value="5">
+	      5
+	    </label>
+	  </div>
+	</div>
+
+	<!-- Multiple Radios (inline) -->
+	<div class="control-group">
+	  <label class="control-label" for="knowledgeOfInstrument">Knowledge Of Instrument</label>
+	  <div class="controls">
+	    <label class="radio-inline" for="knowledgeOfInstrument-0">
+	      <input type="radio" name="knowledgeOfInstrument" id="knowledgeOfInstrument-0" value="1" checked="checked">
+	      1
+	    </label>
+	    <label class="radio-inline" for="knowledgeOfInstrument-1">
+	      <input type="radio" name="knowledgeOfInstrument" id="knowledgeOfInstrument-1" value="2">
+	      2
+	    </label>
+	    <label class="radio-inline" for="knowledgeOfInstrument-2">
+	      <input type="radio" name="knowledgeOfInstrument" id="knowledgeOfInstrument-2" value="3">
+	      3
+	    </label>
+	    <label class="radio-inline" for="knowledgeOfInstrument-3">
+	      <input type="radio" name="knowledgeOfInstrument" id="knowledgeOfInstrument-3" value="4">
+	      4
+	    </label>
+	    <label class="radio-inline" for="knowledgeOfInstrument-4">
+	      <input type="radio" name="knowledgeOfInstrument" id="knowledgeOfInstrument-4" value="5">
+	      5
+	    </label>
+	  </div>
+	</div>
+
+	<!-- Multiple Radios (inline) -->
+	<div class="control-group">
+	  <label class="control-label" for="flowOfOperation">Flow Of Operation</label>
+	  <div class="controls">
+	    <label class="radio-inline" for="flowOfOperation-0">
+	      <input type="radio" name="flowOfOperation" id="flowOfOperation-0" value="1" checked="checked">
+	      1
+	    </label>
+	    <label class="radio-inline" for="flowOfOperation-1">
+	      <input type="radio" name="flowOfOperation" id="flowOfOperation-1" value="2">
+	      2
+	    </label>
+	    <label class="radio-inline" for="flowOfOperation-2">
+	      <input type="radio" name="flowOfOperation" id="flowOfOperation-2" value="3">
+	      3
+	    </label>
+	    <label class="radio-inline" for="flowOfOperation-3">
+	      <input type="radio" name="flowOfOperation" id="flowOfOperation-3" value="4">
+	      4
+	    </label>
+	    <label class="radio-inline" for="flowOfOperation-4">
+	      <input type="radio" name="flowOfOperation" id="flowOfOperation-4" value="5">
+	      5
+	    </label>
+	  </div>
+	</div>
+
+	<!-- Multiple Radios (inline) -->
+	<div class="control-group">
+	  <label class="control-label" for="useOfAssistants">Use Of Assistants</label>
+	  <div class="controls">
+	    <label class="radio-inline" for="useOfAssistants-0">
+	      <input type="radio" name="useOfAssistants" id="useOfAssistants-0" value="1" checked="checked">
+	      1
+	    </label>
+	    <label class="radio-inline" for="useOfAssistants-1">
+	      <input type="radio" name="useOfAssistants" id="useOfAssistants-1" value="2">
+	      2
+	    </label>
+	    <label class="radio-inline" for="useOfAssistants-2">
+	      <input type="radio" name="useOfAssistants" id="useOfAssistants-2" value="3">
+	      3
+	    </label>
+	    <label class="radio-inline" for="useOfAssistants-3">
+	      <input type="radio" name="useOfAssistants" id="useOfAssistants-3" value="4">
+	      4
+	    </label>
+	    <label class="radio-inline" for="useOfAssistants-4">
+	      <input type="radio" name="useOfAssistants" id="useOfAssistants-4" value="5">
+	      5
+	    </label>
+	  </div>
+	</div>
+
+	<!-- Multiple Radios (inline) -->
+	<div class="control-group">
+	  <label class="control-label" for="knowledgeOfProcedure">Knowledge Of Specific Procedure</label>
+	  <div class="controls">
+	    <label class="radio-inline" for="knowledgeOfProcedure-0">
+	      <input type="radio" name="knowledgeOfProcedure" id="knowledgeOfProcedure-0" value="1" checked="checked">
+	      1
+	    </label>
+	    <label class="radio-inline" for="knowledgeOfProcedure-1">
+	      <input type="radio" name="knowledgeOfProcedure" id="knowledgeOfProcedure-1" value="2">
+	      2
+	    </label>
+	    <label class="radio-inline" for="knowledgeOfProcedure-2">
+	      <input type="radio" name="knowledgeOfProcedure" id="knowledgeOfProcedure-2" value="3">
+	      3
+	    </label>
+	    <label class="radio-inline" for="knowledgeOfProcedure-3">
+	      <input type="radio" name="knowledgeOfProcedure" id="knowledgeOfProcedure-3" value="4">
+	      4
+	    </label>
+	    <label class="radio-inline" for="knowledgeOfProcedure-4">
+	      <input type="radio" name="knowledgeOfProcedure" id="knowledgeOfProcedure-4" value="5">
+	      5
+	    </label>
+	  </div>
+	</div>
+
+	<!-- Text input-->
+	<div class="control-group">
+	  <label class="control-label" for="comments">Comments</label>
+	  <div class="controls">
+	    <input id="comments" name="comments" type="text" placeholder="" class="input-xlarge">
+    
+	  </div>
+	</div>
+
+	<!-- Button -->
+	<div class="control-group">
+	  <label class="control-label" for="submit"></label>
+	  <div class="controls">
+	    <button id="submit" name="submit" class="btn btn-inverse">Submit</button>
+	  </div>
+	</div>
+
+	</fieldset>
+	</form>
+	
+	<script src="https://code.jquery.js"></script>
+	<scrtip str="js/bootstrap.js"></script>
+	</div>
+</body>
+	
+</html>
