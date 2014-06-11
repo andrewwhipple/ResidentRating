@@ -1,0 +1,250 @@
+{{> header}}
+
+<!--THE POPUP CONFIRMATION DIALOG-->
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Record hours?</h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to add <label id='numhours'></label> to <label id='activitylabel'></label>></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Record Hours</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="container">
+
+	<div class = 'container' id='message'/></div>
+	
+	<form role="form">
+	  <div class="form-group">
+	    <label for="resident">Resident Name</label>
+	    <input type="text" class="form-control" id="resident" placeholder="E.g. John Doe" required>
+	  </div>
+	  <div class="form-group">
+	    <label for="faculty">Faculty Name</label>
+	    <input type="text" class="form-control" id="faculty" placeholder="E.g. Dr. Jane Doe" required>
+	  </div>
+	  <div class="form-group">
+	    <label for="date">Date Of Procedure</label>
+	    <input type="date" id="date" required>
+	  </div>
+	  <div class="form-group">
+		  <label for="procedure">Procedure</label>
+		  <select class="form-control" id="procedure">
+		    <option>1</option>
+		    <option>2</option>
+		    <option>3</option>
+		    <option>4</option>
+		    <option>5</option>
+			<option>Other</option>
+		  </select>
+	  </div>
+	  <div class="form-group">
+	    <label for="other">Other</label>
+	    <input type="text" class="form-control" id="other">
+	  </div>
+	  	  
+	  
+		
+	
+	  
+	  <div class="form-group">
+	  <label for="respectForTissue">Respect For Tissue    <a href="#test" title="1 = Frequently used unnecessary force on tissue or caused damage by inappropriate use of instruments <br> <br> 3 = Careful handling of tissue but occasionally caused inadvertant damage. <br> <br> 5= Consistently handled tissues appripriately with minimal damage. <br> <br> <i>(Click to dismiss)</i>"><i>(More Info)</i></a><br>
+	  <div class="radio-inline">
+	    <input type="radio" name="respectForTissue" id="respect1" value="1" checked> 1
+	  </div>
+	  <div class="radio-inline">
+	    <input type="radio" name="respectForTissue" id="respect2" value="2"> 2
+	  </div>
+	  <div class="radio-inline">
+	    <input type="radio" name="respectForTissue" id="respect3" value="3"> 3
+	  </div>
+	  <div class="radio-inline">
+	    <input type="radio" name="respectForTissue" id="respect4" value="4"> 4
+	  </div>
+	  <div class="radio-inline">
+	    <input type="radio" name="respectForTissue" id="respect5" value="5"> 5
+	  </div>
+	  </label>
+	  </div>
+	  <!--<div class="radio-inline">-->
+	  <div class="form-group">
+	  <label for="timeAndMotion">Time And Motion <a href="#test" title="1 = Many unnecessary moves. <br> <br> 3 = Efficient time/motion but some unnecessary moves. <br> <br> 5 = Clear economy of movement and maximum efficiency.<br> <br> <i>(Click to dismiss)</i>"><i>(More Info)</i></a></label><br>
+	  <label class="radio-inline">
+	    <input type="radio" name="timeAndMotion" id="time1" value="1" checked> 1
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="timeAndMotion" id="time2" value="2"> 2
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="timeAndMotion" id="time3" value="3"> 3
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="timeAndMotion" id="time4" value="4"> 4
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="timeAndMotion" id="time5" value="5"> 5
+	  </label>
+	  </div>
+	  <div class="form-group">
+	  <label for="instrumentHandling">Instrument Handling <a href="#test" title="1 = Repeatedly makes tentative or awkward moves with instruments by innappropriate use of instruments. <br> <br> 3 = Competant use of instruments but occasionally appeared stiff or awkward. <br> <br> 5 = Fluid moves with instruments and now awkwardness.<br> <br> <i>(Click to dismiss)</i>"><i>(More Info)</i></a></label><br>
+	  <label class="radio-inline">
+	    <input type="radio" name="instrumentHandling" id="instrument1" value="1" checked> 1
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="instrumentHandling" id="instrument2" value="2"> 2
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="instrumentHandling" id="instrument3" value="3"> 3
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="instrumentHandling" id="instrument4" value="4"> 4
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="instrumentHandling" id="instrument5" value="5"> 5
+	  </label>
+	  </div>
+	  <div class="form-group">
+	  <label for="knowledgeOfInstrument">Knowledge Of Instrument <a href="#test" title="1 = Frequently aksed for wrong instrument or used inappropriate instrument. <br> <br> 3 = Knew names of most instruments and used appropriate instrument. <br> <br> 5 = Obviously familiar with the instrument and their names.<br> <br> <i>(Click to dismiss)</i>"><i>(More Info)</i></a></label><br>
+	  <label class="radio-inline">
+	    <input type="radio" name="knowledgeOfInstrument" id="instrumentKnowledge1" value="1" checked> 1
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="knowledgeOfInstrument" id="instrumentKnowledge2" value="2"> 2
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="knowledgeOfInstrument" id="instrumentKnowledge3" value="3"> 3
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="knowledgeOfInstrument" id="instrumentKnowledge4" value="4"> 4
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="knowledgeOfInstrument" id="instrumentKnowledge5" value="5"> 5
+	  </label>
+	  </div>
+	  <div class="form-group">
+	  <label for="flowOfOperation">Flow Of Operation <a href="#test" title="1 = Frequently stopped operating and seemed unsure of next move. <br> <br> 3 = Demonstrated some forward planning with reasonable progression of procedure. <br> <br> 5 = Obviously planned course of operation with effortless flow from one move to the next.<br> <br> <i>(Click to dismiss)</i>"><i>(More Info)</i></a></label><br>
+	  <label class="radio-inline">
+	    <input type="radio" name="flowOfOperation" id="flow1" value="1" checked> 1
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="flowOfOperation" id="flow2" value="2"> 2
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="flowOfOperation" id="flow3" value="3"> 3
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="flowOfOperation" id="flow4" value="4"> 4
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="flowOfOperation" id="flow5" value="5"> 5
+	  </label>
+	  </div>
+	  <div class="form-group">
+	  <label for="useOfAssistants">Use Of Assistants <a href="#test" title="1 = Consistently placed assistants poorly or failed to use assistants. <br> <br> 3 = Appropriate use of assistants most of the time. <br> <br> 5 = Strategically used assistants to the best advantage at all times.<br> <br> <i>(Click to dismiss)</i>"><i>(More Info)</i></a></label><br>
+	  <label class="radio-inline">
+	    <input type="radio" name="useOfAssistants" id="assistants1" value="1" checked> 1
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="useOfAssistants" id="assistants2" value="2"> 2
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="useOfAssistants" id="assistants3" value="3"> 3
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="useOfAssistants" id="assistants4" value="4"> 4
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="useOfAssistants" id="assistants5" value="5"> 5
+	  </label>
+	  </div>
+	  <div class="form-group">
+	  <label for="knowledgeOfProcedure">Knowledge Of Specific Procedure <a href="#test" title="Deficient knowledge. Needed specific instruction at most steps. <br> <br> 3 = Knew all important steps of operation. <br> <br> 5 = Demonstrated familiarity with all apsects of operation.<br> <br> <i>(Click to dismiss)</i>"><i>(More Info)</i></a></label><br>
+	  <label class="radio-inline">
+	    <input type="radio" name="knowledgeOfProcedure" id="knowledgeProcedure1" value="1" checked> 1
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="knowledgeOfProcedure" id="knowledgeProcedure2" value="2"> 2
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="knowledgeOfProcedure" id="knowledgeProcedure3" value="3"> 3
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="knowledgeOfProcedure" id="knowledgeProcedure4" value="4"> 4
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="knowledgeOfProcedure" id="knowledgeProcedure5" value="5"> 5
+	  </label>
+	  </div>
+	  <div class="form-group">
+	    <label for="comments">Comments</label>
+	    <input type="text" class="form-control" id="comments">
+	  </div>
+	  <button type="submit" class="btn btn-default" id="submitBtn">Submit</button>
+	</form>
+	
+	<div class = 'container' id='message'/></div>
+	
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	
+</div>
+
+
+
+<!--
+		<div class = "well-text"> {{activity}} </div>
+		<div> {{hours}} / {{goal}} </div>
+		<div class='addtimediv'>
+			<form> 
+				<input type="text" id="time" value="00:00" data-format="hh:mm" class="input-small">
+				<a href="#" class="btn btn-mini submitBtn"><i class="icon-plus"></i></a>
+			</form>
+		</div> 
+-->
+
+
+
+<!--
+
+	<table class= "table">
+		<tr> <th> Activity </th> <th> Today (hrs) </th> <th> Goal (hrs) </th>
+		
+		{{#each activities}}
+		<tr> <td> {{activity}} </td> <td> {{hours}} </td> <td> {{goal}}</td>
+		{{/each}}
+
+	</table>
+</div>
+
+
+
+This is for progress bar if we want to have it displayed next to each item...still need to figure that out. Also want to add "Add activity" Button
+
+				<div class="progress">
+				  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+				    <span class="sr-only">60% Complete</span>
+				  </div>
+				</div>
+-->
+	
+	<script src="/js/jquery-1.11.0.js"></script>
+	<script src="js/jquery.qtip.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/goals-page.js"></script>
+</body>
+	
+</html>
