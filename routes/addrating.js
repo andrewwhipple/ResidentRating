@@ -24,6 +24,6 @@ exports.add = function(req, res) {
 				res.send(500);	
 		} 
 	}
-	var result = { "message": "Time Added!" };
+	var result = { "message": "Rating Added" };
 	res.send(result);
 }
