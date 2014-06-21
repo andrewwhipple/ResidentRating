@@ -190,8 +190,8 @@
 }
 
 .navbar-default {
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f8f8f8 100%);
-  background-image: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f4f1e7 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #f4f1e7 100%);
   background-repeat: repeat-x;
   border-radius: 4px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
@@ -395,3 +395,28 @@
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
           box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
 }
+.jumbotron {
+  background-color: #f8f5e0;
+  color: #8d6e0b;
+
+}
+#jumbo {
+  font-family: 'Comfortaa', cursive;
+}
+h1 {
+  font-family: 'Comfortaa', cursive;
+}
+h2,
+label,
+button,
+input,
+a {
+  font-family: 'Muli', sans-serif;
+}
+.well-text {
+  font-family: 'Muli', sans-serif;
+}
+#procedure {
+  font-family: 'Muli', sans-serif;
+}
+
