@@ -6,11 +6,24 @@ exports.view = function(req, res){
 		res.redirect('/landing');	
 	}
 	
-	models.Rating
-		.find({"faculty": username})
-		.sort('resident')
-		.exec(renderRatings);
-		
+	if (req.session.role == 1) {
+		//Is resident
+		models.Rating
+			.find({"resident": username})
+			.sort('procedure')
+			.exec(renderRatings);
+	} else if (req.session.role == 2) {
+		models.Rating
+			.find({"faculty": username})
+			.sort('resident')
+			.exec(renderRatings);
+	} else {
+		models.Rating
+			.find()
+			.sort('resident')
+			.exec(renderRatings)
+	}
+	
 	function renderRatings(err, ratings) {
 		var nRate = false;
 		if (ratings.length > 0) nRate = true;

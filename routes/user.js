@@ -12,8 +12,11 @@ exports.list = function(req, res){
 exports.login = function(req, res) {
   // remember the username
   var username = req.query.username;
+  var role = req.query.role;
   console.log('username is: '+username);
   req.session.username = username;
+  req.session.role = role;
+  console.log('role is: '+req.session.role);
 
 	/*models.User.find({"name": username}).exec(afterQuery);
 	

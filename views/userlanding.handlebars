@@ -37,9 +37,21 @@
   {{else}}
     <form id="username-form" action="user_login" role="form">
       <div class="form-group">
-        <label for="title">Please enter the name of the faculty member conducting the rating</label>
+        <label for="title">Please enter your name and select your role</label>
         <input type="text" class="form-control" name="username" placeholder="E.g. Dr. Jane Doe">
       </div>
+	  <div class="form-group">
+	  <label for="role"></label><br>
+	  <label class="radio-inline">
+	    <input type="radio" name="role" id="role1" value="1" checked> Resident
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="role" id="role2" value="2"> Faculty
+	  </label>
+	  <label class="radio-inline">
+	    <input type="radio" name="role" id="role3" value="3"> Program Director
+	  </label>
+	  </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
   {{/if}}
