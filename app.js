@@ -15,12 +15,13 @@ var user = require('./routes/user');
 var stats = require('./routes/db_viewstats');
 var landing = require('./routes/landing');
 var addrating = require('./routes/addrating');
+var create = require('./routes/create');
 // Example route
 
 
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
-var local_database_name = 'timebuddy';
+var local_database_name = 'resident_rating';
 var local_database_uri  = 'mongodb://localhost/' + local_database_name
 var database_uri = process.env.MONGOLAB_URI || local_database_uri
 mongoose.connect(database_uri);
@@ -54,6 +55,8 @@ app.get('/user_login', user.login);
 app.get('/user_logout', user.logout);
 app.get('/landing', landing.index);
 app.get('/addrating', addrating.add);
+app.get('/create', create.view);
+app.get('/user_create', user.add);
 // Example route
 // app.get('/users', user.list);
 

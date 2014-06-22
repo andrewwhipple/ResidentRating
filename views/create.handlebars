@@ -30,12 +30,8 @@
   </div>
 
   <hr />
-
-  {{#if username}}
-    <h2> Welcome {{username}} </h2>
-    <a href='/user_logout' class="btn btn-default">Logout</a>
-  {{else}}
-    <form id="username-form" action="user_login" role="form">
+	<h2>Create A New User</h2>
+    <form id="username-form" action="user_create" role="form">
       <div class="form-group">
         <label for="title">Please enter your name</label>
         <input type="text" class="form-control" name="username" placeholder="E.g. Dr. Jane Doe">
@@ -45,8 +41,8 @@
 		  <input type="text" class="form-control" name="password">
 	  </div>
 		  
-	  <!--<div class="form-group">
-	  <label for="role"></label><br>
+	  <div class="form-group">
+	  <label for="role">Please select your role</label><br>
 	  <label class="radio-inline">
 	    <input type="radio" name="role" id="role1" value="1" checked> Resident
 	  </label>
@@ -56,17 +52,19 @@
 	  <label class="radio-inline">
 	    <input type="radio" name="role" id="role3" value="3"> Program Director
 	  </label>
-	  </div>-->
+	  </div>
 	  
       <button type="submit" class="btn btn-default" id="submitButton">Submit</button>
     </form>
-	<form action="create"><button class="btn btn-defualt">Sign Up</button></form>
 	<br>
 	<br>
 	<div class = 'container' id='message'/></div>
 	<br>
+	<form id="home" action="/" role="form">
+		<button type="submit" class="btn btn-default" id="homeButton">Enter</button>
+	</form>
 	<br>
-  {{/if}}
+	<br>
 
   <!--
   <form id="new-project-form" role="form">
@@ -93,6 +91,6 @@
 </div>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.js"></script>
-<script src="/js/login.js"></script>
+<script src="/js/createuser.js"></script>
 </body>
 </html>

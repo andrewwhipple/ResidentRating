@@ -33,6 +33,10 @@ models.Rating
   .remove()
   .exec(onceClear); // callback to continue at
 
+models.User
+	.find()
+	.remove()
+	.exec(onceRealClear);
 // Step 3: load the data from the JSON file
 function onceClear(err) {
   if(err) console.log(err);
@@ -40,7 +44,7 @@ function onceClear(err) {
 
   // loop over the projects, construct and save an object from each one
   // Note that we don't care what order these saves are happening in...
-  var to_save_count = data_json.length;
+  /*var to_save_count = data_json.length;
   console.log(to_save_count);
   console.log("SAVED");
   for(var i=0; i<data_json.length; i++) {
@@ -60,7 +64,16 @@ function onceClear(err) {
         mongoose.connection.close()
       }
     });
-  }
-  //mongoose.connection.close();
+  }*/
+  
 }
+
+function onceRealClear(err) {
+	if(err) console.log(err);
+	console.log("swagggggg");
+	
+	mongoose.connection.close();
+	
+}
+
 

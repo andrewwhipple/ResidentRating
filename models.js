@@ -15,4 +15,11 @@ var RatingSchema = new Mongoose.Schema({
 	"comments" : String
 });
 
+var UserSchema = new Mongoose.Schema({
+	"username": String,
+	"role": Number,
+	"password": String
+});
+
 exports.Rating = Mongoose.model('Rating', RatingSchema);
+exports.User = Mongoose.model('User', UserSchema);
