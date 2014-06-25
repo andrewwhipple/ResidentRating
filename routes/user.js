@@ -46,14 +46,6 @@ function hash(pwd, salt, fn) {
 
 
 
-
-
-
-
-
-
-
-
 /*
  * GET users listing.
  */
@@ -154,6 +146,14 @@ exports.logout = function(req, res) {
 exports.add = function(req, res) {
 	var username = req.query.username;
 	var password = req.query.password;
+	var pass2 = req.query.pass2;
+	
+	if (pass2 != password) {
+		var result = {"message": "Passwords do not match.", "success": false}
+		res.send(result);
+
+	}
+	
 	var role = req.query.role;
 	
 	var userHash;
