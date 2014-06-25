@@ -28,6 +28,8 @@ function submitClicked(e) {
 	console.log("heres the name");
 	console.log(name);
 	var password = $("input[name='password']").val();
+	var password2 = $("input[name='password2']").val();
+	console.log(password + " " + password2);
 	var role = $("input[name='role']:checked").val();	
 	
 	console.log(username);
@@ -51,7 +53,7 @@ function submitClicked(e) {
 		});
 		
 	} else {
-		var parameters = {'username': username, 'role': role, 'password': password};
+		var parameters = {'username': username, 'role': role, 'password': password, 'password2': password2};
 		$.get('/user_create', parameters, writeData);
 		
 	}

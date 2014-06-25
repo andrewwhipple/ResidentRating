@@ -147,13 +147,15 @@ exports.logout = function(req, res) {
 exports.add = function(req, res) {
 	var username = req.query.username;
 	var password = req.query.password;
-	var pass2 = req.query.pass2;
+	var pass2 = req.query.password2;
+	
+	console.log(password + " " + pass2);
 	
 	if (pass2 != password) {
 		var result = {"message": "Passwords do not match.", "success": false}
 		res.send(result);
-
-	}
+		
+	} else {
 	
 	var role = req.query.role;
 	
@@ -202,7 +204,7 @@ exports.add = function(req, res) {
 			}	
 		}	
 
-	}
+	}}
 	
 		
 }
