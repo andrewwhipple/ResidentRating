@@ -8,4 +8,5 @@ exports.index = function(req, res){
     title: 'Session Demo',
     username: req.session.username
   });
+  console.log(req.session.username);
 };

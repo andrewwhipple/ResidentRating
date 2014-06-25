@@ -8,6 +8,10 @@ $(document).ready(function() {
 	initializePage();
 	
 	$("#submitBtn").click(submitClicked);
+	
+	$(function() {
+          $.stayInWebApp('a.stay');
+    });
 
 })
 

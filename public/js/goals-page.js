@@ -16,6 +16,10 @@ $(document).ready(function() {
         },
         hide: 'click'
     });
+    
+    $(function() {
+          $.stayInWebApp('a.stay');
+    });
 })
 
 

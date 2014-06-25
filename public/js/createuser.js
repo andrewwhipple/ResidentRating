@@ -6,6 +6,9 @@
 $(document).ready(function() {
 	initializePage();
 	console.log("in the create");
+	$(function() {
+    	$.stayInWebApp('a.stay');
+    });
 })
 
 /*
