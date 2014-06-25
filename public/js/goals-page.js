@@ -83,7 +83,7 @@ function submitClicked(e) {
 	if (resident == '') {
 		var message = 'Please enter a resident.';
 		$('#message').removeClass();
-		$('#message').addClass("alert alert-warning");
+		$('#message').addClass("alert alert-danger");
 		$('#message').show();
 		$('#message').html(message + "<button type='button' class='close'>&times;</button>");
 		$('.close').click(function () {
@@ -92,7 +92,7 @@ function submitClicked(e) {
 	} else if (faculty == '') {
 		var message = 'Please enter a faculty name';
 		$('#message').removeClass();
-		$('#message').addClass("alert alert-warning");
+		$('#message').addClass("alert alert-danger");
 		$('#message').show();
 		$('#message').html(message + "<button type='button' class='close'>&times;</button>");
 		$('.close').click(function () {
@@ -102,7 +102,7 @@ function submitClicked(e) {
 	} else if (date == '') {
 		var message = 'Please select a date';
 		$('#message').removeClass();
-		$('#message').addClass("alert alert-warning");
+		$('#message').addClass("alert alert-danger");
 		$('#message').show();
 		$('#message').html(message + "<button type='button' class='close'>&times;</button>");
 		$('.close').click(function () {

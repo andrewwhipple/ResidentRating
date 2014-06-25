@@ -9,6 +9,10 @@ var path = require('path');
 var handlebars = require('express3-handlebars');
 var mongoose = require('mongoose');
 
+//crypto + session
+//var bodyParser = require('body-parser');
+//var session = require('express-session');
+
 var index = require('./routes/db_index');
 
 var user = require('./routes/user');
@@ -27,6 +31,22 @@ var database_uri = process.env.MONGOLAB_URI || local_database_uri
 mongoose.connect(database_uri);
 
 var app = express();
+
+//middleware
+/*app.use(bodyParser.urlencoded({ extended: false}));
+app.use(session({ secret: 'shhhh, very secret' }));
+
+//session-persisted message middleware
+app.use(function(req, res, next){
+	var err = req.session.error;
+	var msg = req.session.success;
+	delete req.session.error;
+	delete req.session.success;
+	res.locals.message = '';
+	if (err) res.locals.message = '<p class="msg error">' + err + '</p>';
+	if (msg) res.locals.message = '<p class="msg success">' + msg + '</p>';
+	next();
+});*/
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -63,4 +83,5 @@ app.get('/user_create', user.add);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
 

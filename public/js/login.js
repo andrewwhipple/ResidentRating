@@ -29,7 +29,7 @@ function submitClicked(e) {
 	if (username == '') {
 		var message = 'Please enter your name.';
 		$('#message').removeClass();
-		$('#message').addClass("alert alert-warning");
+		$('#message').addClass("alert alert-danger");
 		$('#message').show();
 		$('#message').html(message + "<button type='button' class='close'>&times;</button>");
 		$('.close').click(function () {
@@ -38,7 +38,7 @@ function submitClicked(e) {
 	} else if (password == '') {
 		var message = 'Please enter a password';
 		$('#message').removeClass();
-		$('#message').addClass("alert alert-warning");
+		$('#message').addClass("alert alert-danger");
 		$('#message').show();
 		$('#message').html(message + "<button type='button' class='close'>&times;</button>");
 		$('.close').click(function () {
@@ -61,7 +61,11 @@ function writeData(results) {
 	}
 	console.log(message);
 	$('#message').removeClass();
-	$('#message').addClass("alert alert-warning");
+	if (success) {
+		$('#message').addClass("alert alert-success");
+	} else {
+		$('#message').addClass("alert alert-danger");
+	}
 	$('#message').show();
 	$('#message').html(message + "<button type='button' class='close'>&times;</button>");
 	$('.close').click(function () {
