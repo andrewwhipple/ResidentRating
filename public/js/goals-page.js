@@ -9,6 +9,8 @@ $(document).ready(function() {
 	
 	$("#submitBtn").click(submitClicked);
 	
+	$(".closeUpShop").click(closeUp);
+	
 	$('a[title]').qtip({
         show: {
         	event: 'click',
@@ -31,6 +33,13 @@ function initializePage() {
 	console.log("Javascript!");
 }
 
+function closeUp(e) {
+	console.log("HERE YO DUDESON");
+	e.preventDefault();
+	window.open('', '_self');
+	window.close();	
+	
+}
 function ShowDialog(contentContainer) {
 	$(this).qTip({
 		// init to use the contents of the specified

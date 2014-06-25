@@ -139,7 +139,8 @@ exports.login = function(req, res) {
 
 exports.logout = function(req, res) {
   req.session.username = null;
-
+  req.session.role = null;
+  
   res.redirect('/landing');
 }
 
