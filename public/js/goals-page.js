@@ -60,7 +60,9 @@ function submitClicked(e) {
 	console.log(resident);
 	var faculty = $("#faculty").val();
 	
-	var date = $("#date").val();
+	var theDate = $("#date").val();
+	var date = theDate.toString('yyyy-MM-dd');
+	
 	var procedure = $("#procedure").val();
 	if (procedure == "Other") procedure = $('#other').val();
 	

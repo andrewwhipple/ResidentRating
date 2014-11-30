@@ -3,7 +3,7 @@ var Mongoose = require('mongoose');
 var RatingSchema = new Mongoose.Schema({
 	"resident": String,
 	"faculty": String,
-	"date": Date,
+	"date": String,
 	"procedure": String,
 	"respectForTissue": Number,
 	"timeAndMotion": Number,
